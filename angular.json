@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "QuizApp"
+    }
+  },
+  "defaultProject": "QuizApp",
+  "cli": {
+    "analytics": "5fb65725-b814-4d1f-b9c7-cc66fe1e0bd6"
+  }
 }

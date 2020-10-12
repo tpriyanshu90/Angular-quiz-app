@@ -1,0 +1,26 @@
+<div>
+  <form>
+    <div *ngFor="let q of questionsList; let i = index;">
+      <p>{{i+1}}. {{q.question}}</p>
+      <div class="optionsList">
+        <input (change)="onChange($event.target.value,i)" type="radio" id={{q.Option1}} name={{q.question}}
+          [value]="q.Option1">
+        <label for={{q.Option1}}>{{q.Option1}}</label><br>
+        <input (change)="onChange($event.target.value,i)" type="radio" id={{q.Option2}} name={{q.question}}
+          [value]="q.Option2">
+        <label for={{q.Option2}}>{{q.Option2}}</label><br>
+        <input (change)="onChange($event.target.value,i)" type="radio" id={{q.Option3}} name={{q.question}}
+          [value]="q.Option3">
+        <label for={{q.Option3}}>{{q.Option3}}</label><br>
+        <input (change)="onChange($event.target.value,i)" type="radio" id={{q.Option4}} name={{q.question}}
+          [value]="q.Option4">
+        <label for={{q.Option4}}>{{q.Option4}}</label><br>
+      </div>
+      <br>
+    </div>
+    <button (click)="showResult()">Check Score</button>
+    <div *ngIf="resultsOn">
+      <p>You scored {{score}}/{{total}}. Have a nice day :)</p>
+    </div>
+  </form>
+</div>
